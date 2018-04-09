@@ -1,222 +1,399 @@
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href="https://fonts.googleapis.com/css?family=Chivo:900" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/tactile/assets/css/style.css?v=6a2f26506702c4dbc451c76f7f5c53114076feff">
-    <link rel="stylesheet" type="text/css" href="/tactile/assets/css/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<style>
+    .content{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        -webkit-box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
+        background: #fff5e5;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 30px;
+        padding: 20px;
+        font-weight: 500;
+        color: #fffcf7;
+    }
+    .imgtitle{
+        text-align: center;
+        padding: 20px;
+    }
+    .title{
+        padding: 20px;
+    }
+</style>
 
-<!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Tactile theme | Tactile is a theme for GitHub Pages.</title>
-<meta property="og:title" content="Tactile theme">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Tactile is a theme for GitHub Pages.">
-<meta property="og:description" content="Tactile is a theme for GitHub Pages.">
-<link rel="canonical" href="https://pages-themes.github.io/tactile/">
-<meta property="og:url" content="https://pages-themes.github.io/tactile/">
-<meta property="og:site_name" content="Tactile theme">
-<script type="application/ld+json">
-{"name":"Tactile theme","description":"Tactile is a theme for GitHub Pages.","author":null,"@type":"WebSite","url":"https://pages-themes.github.io/tactile/","image":null,"publisher":null,"headline":"Tactile theme","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-  </head>
-
-  <body>
     <div id="container">
-      <div class="inner">
+        <div class="inner">
 
         <header>
-          <h1>Tactile theme</h1>
-          <h2>Tactile is a theme for GitHub Pages.</h2>
+            <img src="Logo.png" style="height: 60px" />
+            <h2>Create Dynamics CRM Plugins with almost no code</h2>
         </header>
-        <section id="downloads" class="clearfix">
-          
-          <a href="https://github.com/pages-themes/tactile/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/pages-themes/tactile/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          
-	
-        </section>
         <hr>
         <section id="main_content">
-          <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+            <h1>Main Interface</h1>
+            <p><img src="mainInterface.png" alt=""></p>
 
-<p><a href="another-page">Link to another page</a>.</p>
+    <p>Export Button allows administrator to export all EasyPlugins Configurations into to Json.
 
-<p>There should be whitespace between paragraphs.</p>
+            Just use the filter to export only the triggers needed. The Json is automatically updated. 
+    </p>
+    <p><img src="ExportInterface.png" style="width: 740px;" alt=""></p>
+    
+    <p>Import Button allows administrator to import EasyPlugins Configurations from Json.
+            Just use the filter to take only the triggers needed.            
+    </p>
+    <p><img src="ImportInterface.png" style="width: 740px;" alt=""></p>
 
-<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
 
-<h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
+    <hr>
+    <h1>Trigger Interface</h1>
+    <p><img src="PluginTriggerInterface.png" style="width:800px" alt=""></p>
 
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+    <h2 id="header-2"><a href="#header-2"></a>Entity</h2>
+    <p>This combo box defines the entity that will trigger this Plugin.</p>
 
-<h2 id="header-2"><a href="#header-2"></a>Header 2</h2>
+    <h2 id="header-2"><a href="#header-2"></a>Top section</h2>
+    This section defines the events and the mode of the trigger.
 
-<blockquote>
-  <p>This is a blockquote following a header.</p>
-
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
-
-<h3 id="header-3"><a href="#header-3"></a>Header 3</h3>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h4 id="header-4"><a href="#header-4"></a>Header 4</h4>
-
-<ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
-
-<h5 id="header-5"><a href="#header-5"></a>Header 5</h5>
-
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
-
-<h6 id="header-6"><a href="#header-6"></a>Header 6</h6>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-
-<hr>
-
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
     <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
+        <li><span style="font-weight: bold">PreCreate :</span> The Plugin will fire before creation </li>
+        <li><span style="font-weight: bold">PostCreate :</span> The Plugin will fire after creation  </li>
+        <li><span style="font-weight: bold">PreUpdate :</span> The Plugin will fire before update   </li>
+        <li><span style="font-weight: bold">PostUpdate :</span> The Plugin will fire after update    </li>
+        <li><span style="font-weight: bold">PreDelete :</span> The Plugin will fire before deletion   </li>
+        <li><span style="font-weight: bold">PostDelete :</span> The Plugin will fire after deletion </li>
     </ul>
-  </li>
-  <li>level 1 item
     <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
+        <li><span style="font-weight: bold">Synchronous :</span> The Plugin will fire synchronously </li>
+        <li><span style="font-weight: bold">Asynchronous :</span> The Plugin will fire asynchronously  </li>
     </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
 
-<h3 id="small-image">Small image</h3>
 
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=""></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt=""></p>
-
-<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>
-
-        </section>
-
-        <footer>
+    <h2 id="header-2"><a href="#header-2"></a>Left section</h2>
+    
+    <p>
         
-          Tactile theme is maintained by <a href="https://github.com/pages-themes">pages-themes</a><br>
-        
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
-        </footer>
+        This section defines the parameters that will be used during calculation.<br>
+        EasyPlugins defines 3 types of parameters : 
+    </p>
+    <ul>
+        <img src="paramtypes.png" alt="" style="float: right; width: 120px;">
+        <li><span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined  </li>
+        <li><span style="font-weight: bold">Request :</span> : FetchXml request </li> 
+        <li><span style="font-weight: bold">Calculated :</span> : Parameter based on an expression  </li>
+    </ul>
 
-      </div>
-    </div>
+
+    <h2 id="header-2"><a href="#header-2"></a>Right section</h2>
+
+    <p>
+        This section defines the actions that will be performed during the execution.
+        <br>
+        EasyPlugins defines 8 types of actions :
+    </p>
+    <ul>
+        <img src="actiontypes.png" alt="" style="float: right; width: 120px;">
+        <li><span style="font-weight: bold">Override :</span> The Plugin will override the current record attribute (available for PreCreate and PreUpdate events only)  </li>
+        <li><span style="font-weight: bold">Create :</span> The Plugin will create a record  </li>
+        <li><span style="font-weight: bold">Update :</span> The Plugin will update a record </li> 
+        <li><span style="font-weight: bold">Delete :</span> The Plugin will delete a record   </li>
+        <li><span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records  </li>
+        <li><span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
+        <li><span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record  </li>
+        <li><span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error  </li>
+    </ul>
+
 
     
-  
+    <hr>
+    <h1>Scheduled Trigger Interface</h1>
+    <p><img src="ScheduledTriggerInterface.png"  style="width:800px" alt=""></p>
 
-</body></html>
+    <h2 id="header-2"><a href="#header-2"></a>Top section</h2>
+    This section defines the schedule event and the Start Date.
+
+    <ul>
+        <li><span style="font-weight: bold">Is Periodic :</span> The trigger will fire periodically. </li>
+        <li><span style="font-weight: bold">Period :</span> The trigger period   </li>
+        <li><span style="font-weight: bold">Perio Unit :</span> The trigger period unit    </li>
+        <li><span style="font-weight: bold">Start Date :</span> The date from which the trigger will fire   </li>
+    </ul>
+
+    <h2 id="header-2"><a href="#header-2"></a>Left section</h2>
+    
+    <p>
+        This section defines the parameters that will be used during calculation.
+        <br>
+        EasyPlugins defines 2 types of parameters : 
+    </p>
+    <ul>
+        <img src="paramtypes.png" alt="" style="float: right; width: 120px;">
+        <li><span style="font-weight: bold">Request :</span> FetchXml request  </li>
+        <li><span style="font-weight: bold">Calculated :</span> Parameter based on an expression  </li>
+    </ul>
+
+    <h2 id="header-2"><a href="#header-2"></a>Right section</h2>
+
+    <p>
+        This section defines the actions that will be performed during the execution
+        <br>
+        EasyPlugins defines 6 types of actions :
+    </p>
+    <ul>
+        <img src="actiontypes.png" alt="" style="float: right; width: 120px;">
+        <li><span style="font-weight: bold">Create :</span> The Plugin will create a record  </li>
+        <li><span style="font-weight: bold">Update :</span> The Plugin will update a record </li> 
+        <li><span style="font-weight: bold">Delete :</span> The Plugin will delete a record   </li>
+        <li><span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records  </li>
+        <li><span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
+        <li><span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record  </li>
+    </ul>
+
+    <hr>
+    <h1>Parameters</h1>
+    This section defines the parameters that will be used during calculation.
+    <br>
+    EasyPlugins defines 3 types of parameters : 
+
+    <ul>
+        <li><span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined </li>
+        <li><span style="font-weight: bold">Request :</span> FetchXml request </li> 
+        <li><span style="font-weight: bold">Calculated :</span> Parameter based on an expression   </li>
+    </ul>
+
+
+    <h2 id="header-2"><a href="#header-2"></a>Attribute Parameter</h2>
+    <p><img src="attribute.png" alt="" style="width: 400px;"></p>
+
+    <p>
+        Use this parameter to retrieve an attribute value of current record that fired the Plugin.
+        <br>
+        <ul>
+            <li><span style="font-weight: bold">Display Logical Names</span> defines the way the attributes are displayed : Logical Names / Display Names </li>
+            <li><span style="font-weight: bold">Attribute State</span> defines if the attribute value used as parameter is before or after the user action </li> 
+        </ul>
+    </p>
+
+    <p>
+        An attribute parameter is read only when it's used on at least 1 action.
+    </p>
+    <p><img src="attribute_readonly.png" alt="" style="width: 400px;"></p>
+
+
+
+    <h2 id="header-2"><a href="#header-2"></a>Request Parameter</h2>
+    <p><img src="fetchxml.png" alt="" style="width: 740px;"></p>
+
+    <h4 id="header-4"><a href="#header-4"></a>Left Section</h4>
+    <p>
+        Paste you FetchXml request here, then select an aggregate function. <br> 
+        EasyPlugins defines 7 types of aggregations :  
+    </p>
+        
+    <ul>
+        <li><span style="font-weight: bold">Count :</span> The result will return the count of records found  </li>
+        <li><span style="font-weight: bold">First :</span> The result will return an array of the first record found  </li>
+        <li><span style="font-weight: bold">Last :</span> The result will return an array of the last record found   </li>
+        <li><span style="font-weight: bold">ForEach :</span> The result will return an array of arrays. It will loop actions for each record found   </li>
+        <li><span style="font-weight: bold">Sum :</span> The result will return the sum of the retrieved numeric value (aggregation available only with unique attribute in the FetchXml)  </li>
+        <li><span style="font-weight: bold">Average :</span> The result will return the average of the retrieved numeric value (aggregation available only with unique attribute in the FetchXml)  </li>
+        <li><span style="font-weight: bold">Concat :</span> The result will return the concatenation of the string value (aggregation available only with unique attribute in the FetchXml)  </li>
+    </ul>
+
+    <p>
+        <h4 id="header-4"><a href="#header-4"></a>Right Section</h4>
+        This tab defines the available parameters to use in the current request.
+    </p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!--
+    <p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+    
+    <h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
+    
+    <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+    
+    <h2 id="header-2"><a href="#header-2"></a>Header 2</h2>
+    
+    <blockquote>
+        <p>This is a blockquote following a header.</p>
+    
+        <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+    </blockquote>
+    
+    <h3 id="header-3"><a href="#header-3"></a>Header 3</h3>
+    
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+    <span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    </code></pre></div></div>
+    
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+    <span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+        <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">end</span>
+    </code></pre></div></div>
+    
+    <h4 id="header-4"><a href="#header-4"></a>Header 4</h4>
+    
+    <ul>
+        <li>This is an unordered list following a header.</li>
+        <li>This is an unordered list following a header.</li>
+        <li>This is an unordered list following a header.</li>
+    </ul>
+    
+    <h5 id="header-5"><a href="#header-5"></a>Header 5</h5>
+    
+    <ol>
+        <li>This is an ordered list following a header.</li>
+        <li>This is an ordered list following a header.</li>
+        <li>This is an ordered list following a header.</li>
+    </ol>
+    
+    <h6 id="header-6"><a href="#header-6"></a>Header 6</h6>
+    
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align: left">head1</th>
+            <th style="text-align: left">head two</th>
+            <th style="text-align: left">three</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align: left">ok</td>
+            <td style="text-align: left">good swedish fish</td>
+            <td style="text-align: left">nice</td>
+        </tr>
+        <tr>
+            <td style="text-align: left">out of stock</td>
+            <td style="text-align: left">good and plenty</td>
+            <td style="text-align: left">nice</td>
+        </tr>
+        <tr>
+            <td style="text-align: left">ok</td>
+            <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
+            <td style="text-align: left">hmm</td>
+        </tr>
+        <tr>
+            <td style="text-align: left">ok</td>
+            <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
+            <td style="text-align: left">yumm</td>
+        </tr>
+        </tbody>
+    </table>
+    
+    <h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+    
+    <hr>
+    
+    <h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+    
+    <ul>
+        <li>Item foo</li>
+        <li>Item bar</li>
+        <li>Item baz</li>
+        <li>Item zip</li>
+    </ul>
+    
+    <h3 id="and-an-ordered-list">And an ordered list:</h3>
+    
+    <ol>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+        <li>Item four</li>
+    </ol>
+    
+    <h3 id="and-a-nested-list">And a nested list:</h3>
+    
+    <ul>
+        <li>level 1 item
+        <ul>
+            <li>level 2 item</li>
+            <li>level 2 item
+            <ul>
+                <li>level 3 item</li>
+                <li>level 3 item</li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li>level 1 item
+        <ul>
+            <li>level 2 item</li>
+            <li>level 2 item</li>
+            <li>level 2 item</li>
+        </ul>
+        </li>
+        <li>level 1 item
+        <ul>
+            <li>level 2 item</li>
+            <li>level 2 item</li>
+        </ul>
+        </li>
+        <li>level 1 item</li>
+    </ul>
+    
+    <h3 id="small-image">Small image</h3>
+    
+    <p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=""></p>
+    
+    <h3 id="large-image">Large image</h3>
+    
+    <p><img src="https://guides.github.com/activities/hello-world/branching.png" alt=""></p>
+    
+    <h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
+    
+    <dl>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+    <dt>Born</dt>
+    <dd>1952</dd>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+    <dt>Color</dt>
+    <dd>Green</dd>
+    </dl>
+    
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+    </code></pre></div></div>
+    
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+    </code></pre></div></div>
+    
+            </section>
+    
+            <footer>
+            
+                Tactile theme is maintained by <a href="https://github.com/pages-themes">pages-themes</a><br>
+            
+                This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
+            </footer>
+    
+            </div>
+        </div>
+            
+    -->
+              
+            
+    </body>
+</html>
+
