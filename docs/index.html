@@ -1,10 +1,10 @@
 <style>
-    .content{
+    .content {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
-        -webkit-box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
-        box-shadow: 0px 10px 29px 4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 10px 29px 4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 10px 29px 4px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 10px 29px 4px rgba(0, 0, 0, 0.75);
         background: #fff5e5;
         width: 80%;
         margin-left: 10%;
@@ -13,387 +13,1164 @@
         font-weight: 500;
         color: #fffcf7;
     }
-    .imgtitle{
+
+    .img {
+        -webkit-box-shadow: 0px 10px 29px 4px rgba(82, 82, 82, 0.75);
+        -moz-box-shadow: 0px 10px 29px 4px rgba(82, 82, 82, 0.75);
+        box-shadow: 0px 10px 29px 4px rgba(82, 82, 82, 0.75);
+        margin-bottom: 20px;
+    }
+
+    .imgtitle {
         text-align: center;
         padding: 20px;
     }
-    .title{
+
+    .title {
         padding: 20px;
+    }
+
+    #content-table {
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    #content-table ul {
+        margin-bottom: 0;
+    }
+
+    #content-table li {
+        list-style-type: none;
+    }
+    #content-table a {
+        cursor: pointer;
+    }
+
+    pre {
+        background: #e7e7e7 !important;
+    }
+
+    .btn-group-sm>.btn,
+    .btn-sm {
+        padding: 3px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .btn-transparent {
+        color: #333;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        float: right;
     }
 </style>
 
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="github.css">
+    <script src="jquery.js"></script>
+    <script src="highlight.pack.js"></script>
+
+    <script>
+        function scrollToElem(selector) {
+            debugger;
+            $("html, body").animate({ scrollTop: $(selector).offset().top - 10 }, 500);
+        }
+        function github(){
+            window.location = "https://github.com/Akouddane/EasyPlugins";
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+
 
     <div id="container">
+        <button style="float: right; margin: 40px; " onclick="github()" class="btn btn-transparent btn-sm btn-flat" type="button">
+            <img style="height: 26px; width: 26px" src="images/github.png"> 
+            <span style="font-size: 18px; line-height: 30px; display: inline-block; vertical-align: bottom;">Download on Github</span>
+        </button>
+
         <div class="inner" style="width:80%">
 
-        <header>
-            <img src="logo.png" style="height: 60px" />
-            <h2>Create Dynamics CRM Plugins with almost no code</h2>
-        </header>
-        <hr>
-        <section id="main_content">
-            <h1>Main Interface</h1>
-            <p><img src="maininterface.png" alt=""></p>
-
-    <p>Export Button allows administrator to export all EasyPlugins Configurations into to Json.
-
-            Just use the filter to export only the triggers needed. The Json is automatically updated. 
-    </p>
-    <p><img src="exportinterface.png" style="width: 740px;" alt=""></p>
-    
-    <p>Import Button allows administrator to import EasyPlugins Configurations from Json.
-            Just use the filter to take only the triggers needed.            
-    </p>
-    <p><img src="importinterface.png" style="width: 740px;" alt=""></p>
+            <header>
+                <img src="images/logo.png" style="height: 60px" />
+                <h2>Create Dynamics CRM Plugins with almost no code</h2>
+            </header>
 
 
-    <hr>
-    <h1>Trigger Interface</h1>
-    <p><img src="plugintriggerinterface.png" style="width:800px" alt=""></p>
-
-    <h2 id="header-2"><a href="#header-2"></a>Entity</h2>
-    <p>This combo box defines the entity that will trigger this Plugin.</p>
-
-    <h2 id="header-2"><a href="#header-2"></a>Top section</h2>
-    This section defines the events and the mode of the trigger.
-
-    <ul>
-        <li><span style="font-weight: bold">PreCreate :</span> The Plugin will fire before creation </li>
-        <li><span style="font-weight: bold">PostCreate :</span> The Plugin will fire after creation  </li>
-        <li><span style="font-weight: bold">PreUpdate :</span> The Plugin will fire before update   </li>
-        <li><span style="font-weight: bold">PostUpdate :</span> The Plugin will fire after update    </li>
-        <li><span style="font-weight: bold">PreDelete :</span> The Plugin will fire before deletion   </li>
-        <li><span style="font-weight: bold">PostDelete :</span> The Plugin will fire after deletion </li>
-    </ul>
-    <ul>
-        <li><span style="font-weight: bold">Synchronous :</span> The Plugin will fire synchronously </li>
-        <li><span style="font-weight: bold">Asynchronous :</span> The Plugin will fire asynchronously  </li>
-    </ul>
-
-
-    <h2 id="header-2"><a href="#header-2"></a>Left section</h2>
-    
-    <p>
-        
-        This section defines the parameters that will be used during calculation.<br>
-        EasyPlugins defines 3 types of parameters : 
-    </p>
-    <ul>
-        <img src="paramtypes.png" alt="" style="float: right; width: 120px;">
-        <li><span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined  </li>
-        <li><span style="font-weight: bold">Request :</span> : FetchXml request </li> 
-        <li><span style="font-weight: bold">Calculated :</span> : Parameter based on an expression  </li>
-    </ul>
-
-
-    <h2 id="header-2"><a href="#header-2"></a>Right section</h2>
-
-    <p>
-        This section defines the actions that will be performed during the execution.
-        <br>
-        EasyPlugins defines 8 types of actions :
-    </p>
-    <ul>
-        <img src="actiontypes.png" alt="" style="float: right; width: 120px;">
-        <li><span style="font-weight: bold">Override :</span> The Plugin will override the current record attribute (available for PreCreate and PreUpdate events only)  </li>
-        <li><span style="font-weight: bold">Create :</span> The Plugin will create a record  </li>
-        <li><span style="font-weight: bold">Update :</span> The Plugin will update a record </li> 
-        <li><span style="font-weight: bold">Delete :</span> The Plugin will delete a record   </li>
-        <li><span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records  </li>
-        <li><span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
-        <li><span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record  </li>
-        <li><span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error  </li>
-    </ul>
-
-
-    
-    <hr>
-    <h1>Scheduled Trigger Interface</h1>
-    <p><img src="scheduledtriggerinterface.png"  style="width:800px" alt=""></p>
-
-    <h2 id="header-2"><a href="#header-2"></a>Top section</h2>
-    This section defines the schedule event and the Start Date.
-
-    <ul>
-        <li><span style="font-weight: bold">Is Periodic :</span> The trigger will fire periodically. </li>
-        <li><span style="font-weight: bold">Period :</span> The trigger period   </li>
-        <li><span style="font-weight: bold">Perio Unit :</span> The trigger period unit    </li>
-        <li><span style="font-weight: bold">Start Date :</span> The date from which the trigger will fire   </li>
-    </ul>
-
-    <h2 id="header-2"><a href="#header-2"></a>Left section</h2>
-    
-    <p>
-        This section defines the parameters that will be used during calculation.
-        <br>
-        EasyPlugins defines 2 types of parameters : 
-    </p>
-    <ul>
-        <img src="paramtypes.png" alt="" style="float: right; width: 120px;">
-        <li><span style="font-weight: bold">Request :</span> FetchXml request  </li>
-        <li><span style="font-weight: bold">Calculated :</span> Parameter based on an expression  </li>
-    </ul>
-
-    <h2 id="header-2"><a href="#header-2"></a>Right section</h2>
-
-    <p>
-        This section defines the actions that will be performed during the execution
-        <br>
-        EasyPlugins defines 6 types of actions :
-    </p>
-    <ul>
-        <img src="actiontypes.png" alt="" style="float: right; width: 120px;">
-        <li><span style="font-weight: bold">Create :</span> The Plugin will create a record  </li>
-        <li><span style="font-weight: bold">Update :</span> The Plugin will update a record </li> 
-        <li><span style="font-weight: bold">Delete :</span> The Plugin will delete a record   </li>
-        <li><span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records  </li>
-        <li><span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
-        <li><span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record  </li>
-    </ul>
-
-    <hr>
-    <h1>Parameters</h1>
-    This section defines the parameters that will be used during calculation.
-    <br>
-    EasyPlugins defines 3 types of parameters : 
-
-    <ul>
-        <li><span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined </li>
-        <li><span style="font-weight: bold">Request :</span> FetchXml request </li> 
-        <li><span style="font-weight: bold">Calculated :</span> Parameter based on an expression   </li>
-    </ul>
-
-
-    <h2 id="header-2"><a href="#header-2"></a>Attribute Parameter</h2>
-    <p><img src="attribute.png" alt="" style="width: 400px;"></p>
-
-    <p>
-        Use this parameter to retrieve an attribute value of current record that fired the Plugin.
-        <br>
-        <ul>
-            <li><span style="font-weight: bold">Display Logical Names</span> defines the way the attributes are displayed : Logical Names / Display Names </li>
-            <li><span style="font-weight: bold">Attribute State</span> defines if the attribute value used as parameter is before or after the user action </li> 
-        </ul>
-    </p>
-
-    <p>
-        An attribute parameter is read only when it's used on at least 1 action.
-    </p>
-    <p><img src="attribute_readonly.png" alt="" style="width: 400px;"></p>
-
-
-
-    <h2 id="header-2"><a href="#header-2"></a>Request Parameter</h2>
-    <p><img src="fetchxml.png" alt="" style="width: 740px;"></p>
-
-    <h4 id="header-4"><a href="#header-4"></a>Left Section</h4>
-    <p>
-        Paste you FetchXml request here, then select an aggregate function. <br> 
-        EasyPlugins defines 7 types of aggregations :  
-    </p>
-        
-    <ul>
-        <li><span style="font-weight: bold">Count :</span> The result will return the count of records found  </li>
-        <li><span style="font-weight: bold">First :</span> The result will return an array of the first record found  </li>
-        <li><span style="font-weight: bold">Last :</span> The result will return an array of the last record found   </li>
-        <li><span style="font-weight: bold">ForEach :</span> The result will return an array of arrays. It will loop actions for each record found   </li>
-        <li><span style="font-weight: bold">Sum :</span> The result will return the sum of the retrieved numeric value (aggregation available only with unique attribute in the FetchXml)  </li>
-        <li><span style="font-weight: bold">Average :</span> The result will return the average of the retrieved numeric value (aggregation available only with unique attribute in the FetchXml)  </li>
-        <li><span style="font-weight: bold">Concat :</span> The result will return the concatenation of the string value (aggregation available only with unique attribute in the FetchXml)  </li>
-    </ul>
-
-    <p>
-        <h4 id="header-4"><a href="#header-4"></a>Right Section</h4>
-        This tab defines the available parameters to use in the current request.
-    </p>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<!--
-    <p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
-    
-    <h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
-    
-    <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-    
-    <h2 id="header-2"><a href="#header-2"></a>Header 2</h2>
-    
-    <blockquote>
-        <p>This is a blockquote following a header.</p>
-    
-        <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-    </blockquote>
-    
-    <h3 id="header-3"><a href="#header-3"></a>Header 3</h3>
-    
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-    <span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    </code></pre></div></div>
-    
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-    <span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-        <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">end</span>
-    </code></pre></div></div>
-    
-    <h4 id="header-4"><a href="#header-4"></a>Header 4</h4>
-    
-    <ul>
-        <li>This is an unordered list following a header.</li>
-        <li>This is an unordered list following a header.</li>
-        <li>This is an unordered list following a header.</li>
-    </ul>
-    
-    <h5 id="header-5"><a href="#header-5"></a>Header 5</h5>
-    
-    <ol>
-        <li>This is an ordered list following a header.</li>
-        <li>This is an ordered list following a header.</li>
-        <li>This is an ordered list following a header.</li>
-    </ol>
-    
-    <h6 id="header-6"><a href="#header-6"></a>Header 6</h6>
-    
-    <table>
-        <thead>
-        <tr>
-            <th style="text-align: left">head1</th>
-            <th style="text-align: left">head two</th>
-            <th style="text-align: left">three</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td style="text-align: left">ok</td>
-            <td style="text-align: left">good swedish fish</td>
-            <td style="text-align: left">nice</td>
-        </tr>
-        <tr>
-            <td style="text-align: left">out of stock</td>
-            <td style="text-align: left">good and plenty</td>
-            <td style="text-align: left">nice</td>
-        </tr>
-        <tr>
-            <td style="text-align: left">ok</td>
-            <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-            <td style="text-align: left">hmm</td>
-        </tr>
-        <tr>
-            <td style="text-align: left">ok</td>
-            <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-            <td style="text-align: left">yumm</td>
-        </tr>
-        </tbody>
-    </table>
-    
-    <h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-    
-    <hr>
-    
-    <h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-    
-    <ul>
-        <li>Item foo</li>
-        <li>Item bar</li>
-        <li>Item baz</li>
-        <li>Item zip</li>
-    </ul>
-    
-    <h3 id="and-an-ordered-list">And an ordered list:</h3>
-    
-    <ol>
-        <li>Item one</li>
-        <li>Item two</li>
-        <li>Item three</li>
-        <li>Item four</li>
-    </ol>
-    
-    <h3 id="and-a-nested-list">And a nested list:</h3>
-    
-    <ul>
-        <li>level 1 item
-        <ul>
-            <li>level 2 item</li>
-            <li>level 2 item
-            <ul>
-                <li>level 3 item</li>
-                <li>level 3 item</li>
-            </ul>
-            </li>
-        </ul>
-        </li>
-        <li>level 1 item
-        <ul>
-            <li>level 2 item</li>
-            <li>level 2 item</li>
-            <li>level 2 item</li>
-        </ul>
-        </li>
-        <li>level 1 item
-        <ul>
-            <li>level 2 item</li>
-            <li>level 2 item</li>
-        </ul>
-        </li>
-        <li>level 1 item</li>
-    </ul>
-    
-    <h3 id="small-image">Small image</h3>
-    
-    <p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=""></p>
-    
-    <h3 id="large-image">Large image</h3>
-    
-    <p><img src="https://guides.github.com/activities/hello-world/branching.png" alt=""></p>
-    
-    <h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-    
-    <dl>
-    <dt>Name</dt>
-    <dd>Godzilla</dd>
-    <dt>Born</dt>
-    <dd>1952</dd>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
-    <dt>Color</dt>
-    <dd>Green</dd>
-    </dl>
-    
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-    </code></pre></div></div>
-    
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-    </code></pre></div></div>
-    
+            <h1>Table of contents</h1>
+            <section id="content-table">
+                <ul>
+                    <li>
+                        <a onclick="scrollToElem('#mainInterface')">Main Interface</a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#triggerInterface')">Trigger Interface</a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#scheduledTriggerInterface')">Scheduled Trigger Interface</a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#parameters')">Parameters</a>
+                        <ul>
+                            <li>
+                                <a onclick="scrollToElem('#attribute')">Attribute</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#request')">Request</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#calculated')">Calculated</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#readonly')">Read only parameters</a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#actions')">Actions</a>
+                        <ul>
+                            <li>
+                                <a onclick="scrollToElem('#override')">Override</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#create')">Create</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#update')">Update</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#delete')">Delete</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#associate')">Associate</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#disassociate')">Disassociate</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#setstate')">SetState</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#abort')">Abort Message</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#expressioneditor')">Expression Editor</a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#tools')">Main Page tools</a>
+                        <ul>
+                            <li>
+                                <a onclick="scrollToElem('#exportTool')">Export</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#importTool')">Import</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="scrollToElem('#samples')">Samples</a>
+                        <ul>
+                            <li>
+                                <a onclick="scrollToElem('#sample1')">Sample 1 : Create an associated Contact on Account creation</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#sample2')">Sample 2 : Delete all associated Contacts on Account deletion </a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#sample3')">Sample 3 : Prevent modification of particular Account </a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#sample4')">Sample 4 : Periodic deletion of old lost opportunities</a>
+                            </li>
+                            <li>
+                                <a onclick="scrollToElem('#sample5')">Sample 5 : Add Date and Creator's name on note title </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
-    
-            <footer>
-            
-                Tactile theme is maintained by <a href="https://github.com/pages-themes">pages-themes</a><br>
-            
-                This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
-            </footer>
-    
-            </div>
-        </div>
-            
-    -->
-              
-            
-    </body>
-</html>
 
+
+            <section id="main_content">
+                <h1 id="mainInterface">Main Interface
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h1>
+                <br>
+
+                <p>
+                    <img src="images/maininterface.png" class="img" alt="">
+                </p>
+
+                <p>
+                    This interface shows all created plugins and scheduled events.
+                </p>
+
+
+                <hr>
+                <h1 id="triggerInterface">Trigger Interface
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h1>
+                <br>
+                <p>
+                    <img src="images/plugintriggerinterface.png" class="img" alt="">
+                </p>
+
+                <h2 id="header-2">Entity</h2>
+                <p>This combo box defines the entity that will trigger this Plugin.</p>
+
+                <h2 id="header-2">Event definition</h2>
+                This section defines the events and the mode of the trigger.
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">PreCreate :</span> The Plugin will fire before creation </li>
+                    <li>
+                        <span style="font-weight: bold">PostCreate :</span> The Plugin will fire after creation </li>
+                    <li>
+                        <span style="font-weight: bold">PreUpdate :</span> The Plugin will fire before update </li>
+                    <li>
+                        <span style="font-weight: bold">PostUpdate :</span> The Plugin will fire after update </li>
+                    <li>
+                        <span style="font-weight: bold">PreDelete :</span> The Plugin will fire before deletion </li>
+                    <li>
+                        <span style="font-weight: bold">PostDelete :</span> The Plugin will fire after deletion </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Synchronous :</span> The Plugin will fire synchronously </li>
+                    <li>
+                        <span style="font-weight: bold">Asynchronous :</span> The Plugin will fire asynchronously </li>
+                </ul>
+
+
+                <h2 id="header-2">Parameters Section (left)</h2>
+
+                <p>
+
+                    This section defines the parameters that will be used during calculation.
+                    <br> EasyPlugins defines 3 types of parameters :
+                </p>
+                <ul>
+                    <img src="images/paramtypes.png" class="img" alt="" style="float: right; width: 120px;">
+                    <li>
+                        <span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined </li>
+                    <li>
+                        <span style="font-weight: bold">Request :</span> FetchXml request </li>
+                    <li>
+                        <span style="font-weight: bold">Calculated :</span> Parameter based on an expression (JavaScript) </li>
+                </ul>
+
+
+                <h2 id="header-2">Actions section (right)</h2>
+
+                <p>
+                    This section defines the actions that will be performed during the execution.
+                    <br> EasyPlugins defines 8 types of actions :
+                </p>
+                <ul>
+                    <img src="images/actiontypes.png" class="img" alt="" style="float: right; width: 120px;">
+                    <li>
+                        <span style="font-weight: bold">Override :</span> The Plugin will override the current record attribute
+                        <br> (available for PreCreate and PreUpdate events only) </li>
+                    <li>
+                        <span style="font-weight: bold">Create :</span> The Plugin will create a record </li>
+                    <li>
+                        <span style="font-weight: bold">Update :</span> The Plugin will update a record </li>
+                    <li>
+                        <span style="font-weight: bold">Delete :</span> The Plugin will delete a record </li>
+                    <li>
+                        <span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
+                    <li>
+                        <span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error </li>
+                </ul>
+
+
+
+                <hr>
+                <h1 id="scheduledTriggerInterface">Scheduled Trigger Interface
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h1>
+                <br>
+                <p>
+                    <img src="images/scheduledtriggerinterface.png" class="img" alt="">
+                </p>
+
+                <h2 id="header-2">
+                    Top section</h2>
+                This section defines the schedule event and the Start Date.
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Is Periodic :</span> The trigger will fire periodically. </li>
+                    <li>
+                        <span style="font-weight: bold">Period :</span> The trigger period (Minimum 2 hours) </li>
+                    <li>
+                        <span style="font-weight: bold">Perio Unit :</span> The trigger period unit </li>
+                    <li>
+                        <span style="font-weight: bold">Start Date :</span> The date and time from which the trigger will fire </li>
+                </ul>
+
+                <h2 id="header-2">Parameters section (left)</h2>
+
+                <p>
+                    This section defines the parameters that will be used during calculation.
+                    <br> EasyPlugins defines 2 types of parameters :
+                </p>
+                <ul>
+                    <img src="images/paramtypes2.png" class="img" alt="" style="float: right; width: 120px;">
+                    <li>
+                        <span style="font-weight: bold">Request :</span> FetchXml request </li>
+                    <li>
+                        <span style="font-weight: bold">Calculated :</span> Parameter based on an expression (JavaScript) </li>
+                </ul>
+
+                <h2 id="header-2">Actions section (right)</h2>
+
+                <p>
+                    This section defines the actions that will be performed during the execution
+                    <br> EasyPlugins defines 6 types of actions :
+                </p>
+                <ul>
+                    <img src="images/actiontypes2.png" class="img" alt="" style="float: right; width: 120px;">
+                    <li>
+                        <span style="font-weight: bold">Create :</span> The Plugin will create a record </li>
+                    <li>
+                        <span style="font-weight: bold">Update :</span> The Plugin will update a record </li>
+                    <li>
+                        <span style="font-weight: bold">Delete :</span> The Plugin will delete a record </li>
+                    <li>
+                        <span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
+                </ul>
+
+                <hr>
+                <h1 id="parameters">Parameters
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h1>
+                This section defines the parameters that will be used during calculation.
+                <br> EasyPlugins defines 3 types of parameters :
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Attribute :</span> Attribute value of the current entity defined </li>
+                    <li>
+                        <span style="font-weight: bold">Request :</span> FetchXml request </li>
+                    <li>
+                        <span style="font-weight: bold">Calculated :</span> Parameter based on an expression (JavaScript) </li>
+                </ul>
+
+
+                <h2 id="attribute">Attribute Parameter
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <img src="images/attribute.png" class="img" alt="" style="width: 450px;">
+                </p>
+
+                <p>
+                    Use this parameter to retrieve an attribute value of current record that fired the Plugin.
+                    <br>
+                    <ul>
+                        <li>
+                            <span style="font-weight: bold">Display Logical Names</span> defines the way the attributes are displayed : Logical Names / Display
+                            Names </li>
+                        <li>
+                            <span style="font-weight: bold">Attribute State</span> defines if the attribute value used as parameter is before or after the
+                            user action </li>
+                    </ul>
+                </p>
+
+                <p>
+                    <img src="images/attribute_readonly.png" class="img" alt="" style="width: 450px;">
+                </p>
+
+
+
+                <h2 id="request">
+                    Request Parameter
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h2>
+                <p>
+                    <img src="images/fetchxml.png" class="img" alt="" style="width: 850px;">
+                </p>
+
+                <h4 id="header-4">
+                    Fetch Xml</h4>
+                <p>
+                    Paste you FetchXml request here, then select an aggregate function.
+                    <br> EasyPlugins defines 7 types of aggregations :
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Count :</span> The result will return the count of records found </li>
+                    <li>
+                        <span style="font-weight: bold">First :</span> The result will return an array of the first record found </li>
+                    <li>
+                        <span style="font-weight: bold">Last :</span> The result will return an array of the last record found </li>
+                    <li>
+                        <span style="font-weight: bold">ForEach :</span> The result will return an array of arrays. It will loop actions for each record
+                        found </li>
+                    <li>
+                        <span style="font-weight: bold">Sum :</span> The result will return the sum of the retrieved numeric value (aggregation available
+                        only with unique attribute in the FetchXml) </li>
+                    <li>
+                        <span style="font-weight: bold">Average :</span> The result will return the average of the retrieved numeric value (aggregation available
+                        only with unique attribute in the FetchXml) </li>
+                    <li>
+                        <span style="font-weight: bold">Concat :</span> The result will return the concatenation of the string value (aggregation available
+                        only with unique attribute in the FetchXml) </li>
+                </ul>
+
+                <p>
+                    <h4 id="header-4">
+                        Available parameters</h4>
+                    This tab defines the available parameters to use in the current request.
+                </p>
+
+
+                <h2 id="calculated">Calculated Parameter
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <img src="images/calculated.png" class="img" alt="" style="width: 850px;">
+                </p>
+
+                <h4 id="header-4">
+                    Expression</h4>
+                <p>
+                    Create your expression (JavaScript) using available parameters then click on "Test Expression" to validate it.
+                    <br> The result of the expression must match the type of return expected to be able to save
+                </p>
+
+
+                <p>
+                    <h4 id="header-4">
+                        Available parameters</h4>
+                    This tab defines the available parameters to use in the current request.
+                </p>
+
+                <hr>
+                <h1 id="readonly">Read only parameters
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h1>
+
+                <p>
+                    A parameter is read only when it's used on at least 1 action or 1 other parameter Click on
+                    <img src="images/lock.png" style="height: 26px;" /> to see the dependencies list of the current parameter
+                </p>
+                <p>
+                    <img src="images/dependencies.png" class="img" alt="">
+                </p>
+
+
+
+                <hr>
+                <h1 id="actions">Actions
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h1>
+                This section defines the actions that will be performed during the execution
+                <br> EasyPlugins defines 8 types of actions :
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Override :</span> The Plugin will override the current record attribute (available for PreCreate
+                        and PreUpdate events only) </li>
+                    <li>
+                        <span style="font-weight: bold">Create :</span> The Plugin will create a record </li>
+                    <li>
+                        <span style="font-weight: bold">Update :</span> The Plugin will update a record </li>
+                    <li>
+                        <span style="font-weight: bold">Delete :</span> The Plugin will delete a record </li>
+                    <li>
+                        <span style="font-weight: bold">Associate :</span> The Plugin will associate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
+                    <li>
+                        <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
+                    <li>
+                        <span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error </li>
+                </ul>
+
+                <h2 id="override">Override Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p>This action is only available for PreCreate and PreUpdate events.</p>
+                <p>
+                    <img src="images/override.png" class="img" alt="" style="width: 740px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Current Entity </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Attributes :</span> Expression of each overriden attribute </li>
+                </ul>
+
+
+                <h2 id="create">Create Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/create.png" class="img" alt="" style="width: 740px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be created when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Attributes :</span> Expression of each attribute of selected entity </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be created by System, otherwise the record will be
+                        created by the current user
+                    </li>
+                </ul>
+
+                <h2 id="update">Update Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/update.png" class="img" alt="" style="width: 740px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be updated when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Attributes :</span> Expression of each attribute of selected entity </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be updated by System, otherwise the record will be
+                        updated by the current user
+                    </li>
+                </ul>
+
+                <h2 id="delete">Delete Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/delete.png" class="img" alt="" style="width: 530px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be deleted when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Where Id :</span> Expression of Id of entity to delete </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be deleted by System, otherwise the record will be
+                        deleted by the current user
+                    </li>
+                </ul>
+
+
+                <h2 id="associate">Associate Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/associate.png" class="img" alt="" style="width: 530px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be associated when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Relationship :</span> Available N:N relationships on selected entity </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Selected Entity Id :</span> Expression of Id of entity to associate </li>
+                    <li>
+                        <span style="font-weight: bold">Entity Id :</span> Expression of Id of entity to associate </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be associated by System, otherwise the record will
+                        be associated by the current user
+                    </li>
+                </ul>
+
+
+                <h2 id="disassociate">Disassociate Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/disassociate.png" class="img" alt="" style="width: 530px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be disassociated when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Relationship :</span> Available N:N relationships on selected entity </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Selected Entity Id :</span> Expression of Id of entity to disassociate </li>
+                    <li>
+                        <span style="font-weight: bold">Entity Id :</span> Expression of Id of entity to disassociate </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be disassociated by System, otherwise the record will
+                        be disassociated by the current user
+                    </li>
+                </ul>
+
+
+                <h2 id="setstate">SetState Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/setstate.png" class="img" alt="" style="width: 530px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Selected entity that will be updated when the Plugin is fired </li>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Where Id :</span> Expression of Id of entity to update </li>
+                    <li>
+                        <span style="font-weight: bold">State :</span> Expression of State value of entity</li>
+                    <li>
+                        <span style="font-weight: bold">Status :</span> Expression of Status value of entity </li>
+                    <li>
+                        <span style="font-weight: bold">Max Depth :</span> Maximum depth this action will be fired </li>
+                    <li>
+                        <span style="font-weight: bold">As Admin :</span> If checked, the record will be updated by System, otherwise the record will be
+                        updated by the current user
+                    </li>
+                </ul>
+
+
+
+                <h2 id="abort">Abort Message Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p></p>
+                <p>
+                    <img src="images/abort.png" class="img" alt="" style="width: 530px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Condition :</span> Condition Expression of firing plugin (boolean) </li>
+                    <li>
+                        <span style="font-weight: bold">Message :</span> Expression to show as an error message when the Plugin is fired</li>
+                </ul>
+
+
+
+                <hr>
+                <h1 id="expressioneditor">Expression Editor
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h1>
+                <p>Expression editor is always available when clicking on
+                    <img src="images/bug.png" style="width: 16px;">
+                </p>
+                <p>
+                    <img src="images/expressioneditor.png" class="img" alt="">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Return type </span>is the type of the expression result </li>
+                    <li>
+                        <span style="font-weight: bold">Target type :</span>is the expected type result. Result type must match to target type</li>
+                    <li>
+                        <span style="font-weight: bold">Available parameters </span>are all the parameters that can be used on the expression
+                    </li>
+                </ul>
+
+
+
+                <hr>
+                <h1 id="tools">Main Page tools
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h1>
+                <h2 id="exportTool">Export
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    Export Button allows to export all EasyPlugins Configurations into to Json. Just use the filter to export only the triggers
+                    needed. The Json is automatically updated.
+                </p>
+                <p>
+                    <img src="images/exportinterface.png" class="img" style="width: 740px;" alt="">
+                </p>
+
+                <h2 id="importTool">Import
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>Import Button allows to import EasyPlugins Configurations from Json. Just use the filter to take only the
+                    triggers needed.
+                </p>
+                <p>
+                    <img src="images/importinterface.png" class="img" style="width: 740px;" alt="">
+                </p>
+
+
+                <hr>
+                <h1 id="samples">Samples
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h1>
+                <h2 id="sample1">Sample 1 : Create an associated Contact on Account creation
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new trigger and set entity to account on post create event Synchronous </p>
+                    <h4 id="header-4">Step 2</h4>
+                    <p>Create a new "attribute parameter" and choose "name" attribute (after action)</p>
+
+
+                    <h4 id="header-4">Step 3</h4>
+                    <p> Add a "create action" on contact and set</p>
+                    <ul>
+                        <li>
+                            <span style="font-weight: bold">Lastname </span>Equals #p1
+                        </li>
+                        <li>
+                            <span style="font-weight: bold">Firstname </span>Equals " Contact Associated"</li>
+                        <li>
+                            <span style="font-weight: bold">Parentcustomerid </span>Equals #Id</li>
+                        </li>
+                    </ul>
+
+                    <h4 id="header-4">Step 4</h4>
+                    <p> Save the plugin</p>
+
+
+                    <h4 id="header-4">Import this configuration</h4>
+                    <pre><code class="json">[  
+    {  
+        "ake_synchronous":true,
+        "ake_period":null,
+        "ake_order":3,
+        "ake_postcreate":true,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Create of contact (Single record)\",\"resumeDefault\":\"Create of contact (Single record)\",\"entity\":\"contact\",\"attributes\":[{\"id\":\"a67701f5-ebd0-4412-8b70-c61a99595647\",\"logicalname\":\"firstname\",\"attributetype\":\"String\",\"name\":\"First Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"\\\" Contact associated\\\"\",\"$$hashKey\":\"360\"},{\"id\":\"2f8fdd79-0372-490d-9053-b743becfca0d\",\"logicalname\":\"lastname\",\"attributetype\":\"String\",\"name\":\"Last Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"#p1\",\"$$hashKey\":\"36A\"},{\"id\":\"c7a58b13-df19-491c-a918-1bc26eaf6eb3\",\"logicalname\":\"parentcustomerid\",\"attributetype\":\"Customer\",\"targets\":\"account;contact\",\"name\":\"Company Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":5,\"expression\":\"#Id\",\"$$hashKey\":\"36N\"}],\"relations\":[],\"type\":0,\"depth\":1,\"condition\":\"true\",\"foreachparam\":0,\"order\":1}]",
+        "ake_startdate":null,
+        "ake_precreate":false,
+        "ake_rules":"[{\"asadmin\":false,\"entity\":\"account\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"name\",\"resumeDefault\":\"Attribute (name - After)\",\"resume\":\"Attribute (name - After)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_preupdate":false,
+        "ake_predelete":false,
+        "ake_postdelete":false,
+        "ake_isperiodic":false,
+        "ake_name":"Sample 1",
+        "ake_postupdate":false,
+        "ake_triggertype":0,
+        "ake_periodunit":null,
+        "ake_processid":null,
+        "ake_entity":"account"
+    }
+]</code></pre>
+                </p>
+
+                <h2 id="sample2">Sample 2 : Delete all associated Contacts on Account deletion
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new trigger and set entity to account on PreDelete event Synchronous </p>
+
+                    <h4 id="header-4">Step 2</h4>
+                    <p>Create a new "request parameter" and set fetchXml to </p>
+                    <pre><code class="xml">&lt;fetch version=&quot;1.0&quot; output-format=&quot;xml-platform&quot; mapping=&quot;logical&quot; distinct=&quot;false&quot;&gt;
+    &lt;entity name=&quot;contact&quot;&gt;
+        &lt;attribute name=&quot;contactid&quot; /&gt;
+        &lt;attribute name=&quot;fullname&quot; /&gt;
+        &lt;filter type=&quot;and&quot;&gt;
+            &lt;condition attribute=&quot;parentcustomerid&quot; operator=&quot;eq&quot; uitype=&quot;account&quot; value=&quot;{#Id}&quot; /&gt;
+        &lt;/filter&gt;
+    &lt;/entity&gt;
+&lt;/fetch&gt;</code></pre>
+                    <p>This FetchXml retrieves contacts that parent account is the current account deleted then choose "ForEach"
+                        as aggregate function </p>
+
+                    <h4 id="header-4">Step 3</h4>
+                    <p>Add a "delete action" on contact and set </p>
+                    <ul>
+                        <li>
+                            <span style="font-weight: bold">Entity </span>Equals "Contact"
+                        </li>
+                        <li>
+                            <span style="font-weight: bold">Condition </span>Equals true</li>
+                        <li>
+                            <span style="font-weight: bold">Where ID </span>Equals #p1[0] - contactid</li>
+                        </li>
+                    </ul>
+
+                    <h4 id="header-4">Step 4</h4>
+                    <p> Save the plugin</p>
+
+                    <h4 id="header-4">Import this configuration</h4>
+                    <pre><code class="json">[  
+    {  
+        "ake_synchronous":true,
+        "ake_period":null,
+        "ake_order":4,
+        "ake_postcreate":false,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Delete contact (Multiple records)\",\"resumeDefault\":\"Delete contact (Multiple records)\",\"entity\":\"contact\",\"attributes\":[],\"relations\":[],\"type\":2,\"depth\":1,\"condition\":\"true\",\"foreachparam\":1,\"idexpression\":\"#p1[0]\",\"order\":1}]",
+        "ake_startdate":null,
+        "ake_precreate":false,
+        "ake_rules":"[{\"asadmin\":false,\"type\":0,\"linefunction\":7,\"resumeDefault\":\"Request (contact)\",\"returntype\":8,\"locked\":true,\"attributereturntypes\":[4,1],\"attributereturnnames\":[\"contactid\",\"fullname\"],\"fetchxml\":\"<fetch version=\\\"1.0\\\" output-format=\\\"xml-platform\\\" mapping=\\\"logical\\\" distinct=\\\"false\\\">\\n <entity name=\\\"contact\\\">\\n <attribute name=\\\"contactid\\\" />\\n <attribute name=\\\"fullname\\\" />\\n <filter type=\\\"and\\\">\\n <condition attribute=\\\"parentcustomerid\\\" operator=\\\"eq\\\" uitype=\\\"account\\\" value=\\\"{#Id}\\\" />\\n </filter>\\n </entity>\\n</fetch>\",\"resume\":\"Request (contact)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_preupdate":false,
+        "ake_predelete":true,
+        "ake_postdelete":false,
+        "ake_isperiodic":false,
+        "ake_name":"Sample 2",
+        "ake_postupdate":false,
+        "ake_triggertype":0,
+        "ake_periodunit":null,
+        "ake_processid":null,
+        "ake_entity":"account"
+    }
+]</code></pre>
+                </p>
+
+
+                <h2 id="sample3">Sample 3 : Prevent update of particular Account
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new trigger and set entity to account on PreUpdate event Synchronous </p>
+
+                    <h4 id="header-4">Step 2</h4>
+                    <p>Create a new "attribute parameter" and choose "name" attribute (before action) </p>
+
+                    <h4 id="header-4">Step 3</h4>
+                    <p>Add a "abort message action" and set </p>
+                    <ul>
+                        <li>
+                            <span style="font-weight: bold">Condition </span>
+                            <pre><code class="javascript">#p1 == "Microsoft"</code></pre>
+
+                        </li>
+                        <li>
+                            <span style="font-weight: bold">Message </span>
+                            <pre><code class="javascript">"You can not update or delete "+ #p1 +" account\nPlease contact your administrator\n"</code></pre>
+                        </li>
+                    </ul>
+
+                    <h4 id="header-4">Step 4</h4>
+                    <p> Save the plugin</p>
+
+                    <h4 id="header-4">Import this configuration</h4>
+                    <pre><code class="json">[
+    {
+        "ake_synchronous":true,
+        "ake_period":null,
+        "ake_order":5,
+        "ake_postcreate":false,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Abort\",\"resumeDefault\":\"Abort\",\"entity\":\"\",\"attributes\":[],\"relations\":[],\"type\":5,\"depth\":1,\"condition\":\"#p1 == \\\"Microsoft\\\"\",\"message\":\"\\\"You can not update or delete \\\"+ #p1 +\\\" account\\\\nPlease contact your administrator\\\\n\\\"\",\"foreachparam\":0,\"order\":1}]",
+        "ake_startdate":null,
+        "ake_precreate":false,
+        "ake_rules":"[{\"asadmin\":false,\"entity\":\"account\",\"attributestate\":0,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"name\",\"resumeDefault\":\"Attribute (name - Before)\",\"resume\":\"Attribute (name - Before)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_preupdate":true,
+        "ake_predelete":false,
+        "ake_postdelete":false,
+        "ake_isperiodic":false,
+        "ake_name":"Sample 3",
+        "ake_postupdate":false,
+        "ake_triggertype":0,
+        "ake_periodunit":null,
+        "ake_processid":null,
+        "ake_entity":"account"
+    }
+]</code></pre>
+                </p>
+
+                <h2 id="sample4">Sample 4 : Periodic deletion of old lost opportunities
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new scheduled trigger and set Period to 1 month starting from tomorrow</p>
+
+                    <h4 id="header-4">Step 2</h4>
+                    <p>Create a new "request parameter" and set fetchXml to </p>
+                    <pre><code class="xml">&lt;fetch version=&quot;1.0&quot; output-format=&quot;xml-platform&quot; mapping=&quot;logical&quot; distinct=&quot;false&quot;&gt;
+    &lt;entity name=&quot;opportunity&quot;&gt;
+        &lt;attribute name=&quot;opportunityid&quot; /&gt;
+        &lt;attribute name=&quot;name&quot; /&gt;
+        &lt;filter type=&quot;and&quot;&gt;
+            &lt;condition attribute=&quot;statecode&quot; operator=&quot;eq&quot; value=&quot;2&quot; /&gt;
+            &lt;condition attribute=&quot;modifiedon&quot; operator=&quot;olderthan-x-months&quot; value=&quot;12&quot; /&gt;
+        &lt;/filter&gt;
+    &lt;/entity&gt;
+&lt;/fetch&gt;</code></pre>
+                    <p>
+                        This FetchXml retrieves all lost opportunities older than 12 months
+                        <br> Choose "ForEach" as aggregate function
+                    </p>
+
+                    <h4 id="header-4">Step 3</h4>
+                    <p>Add a "delete action" on opportunities and set </p>
+                    <ul>
+                        <li>
+                            <span style="font-weight: bold">Entity </span>Equals "Opportunity"
+                        </li>
+                        <li>
+                            <span style="font-weight: bold">Condition </span>Equals true</li>
+                        <li>
+                            <span style="font-weight: bold">Where ID </span>Equals #p1[0] - opportunityid</li>
+                        </li>
+                    </ul>
+
+                    <h4 id="header-4">Step 4</h4>
+                    <p> Save the plugin</p>
+
+                    <h4 id="header-4">Import this configuration</h4>
+                    <pre><code class="json">[  
+    {  
+        "ake_synchronous":false,
+        "ake_period":1,
+        "ake_order":6,
+        "ake_postcreate":false,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Delete opportunity (Multiple records)\",\"resumeDefault\":\"Delete opportunity (Multiple records)\",\"entity\":\"opportunity\",\"attributes\":[],\"relations\":[],\"type\":2,\"depth\":1,\"condition\":\"true\",\"foreachparam\":1,\"idexpression\":\"#p1[0]\",\"order\":1}]",
+        "ake_startdate":"2018-04-10T22:00:00.000Z",
+        "ake_precreate":false,
+        "ake_rules":"[{\"asadmin\":false,\"type\":0,\"linefunction\":7,\"resumeDefault\":\"Request (opportunity)\",\"returntype\":8,\"locked\":true,\"attributereturntypes\":[4,1],\"attributereturnnames\":[\"opportunityid\",\"name\"],\"fetchxml\":\"<fetch version=\\\"1.0\\\" output-format=\\\"xml-platform\\\" mapping=\\\"logical\\\" distinct=\\\"false\\\">\\n <entity name=\\\"opportunity\\\">\\n <attribute name=\\\"opportunityid\\\" />\\n <attribute name=\\\"name\\\" />\\n <filter type=\\\"and\\\">\\n <condition attribute=\\\"statecode\\\" operator=\\\"eq\\\" value=\\\"2\\\" />\\n <condition attribute=\\\"modifiedon\\\" operator=\\\"olderthan-x-months\\\" value=\\\"12\\\" />\\n </filter>\\n </entity>\\n</fetch>\",\"resume\":\"Request (opportunity)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_preupdate":false,
+        "ake_predelete":false,
+        "ake_postdelete":false,
+        "ake_isperiodic":true,
+        "ake_name":"Sample 4",
+        "ake_postupdate":false,
+        "ake_triggertype":1,
+        "ake_periodunit":3,
+        "ake_processid":null,
+        "ake_entity":null
+    }
+]</code></pre>
+                </p>
+
+                <h2 id="sample5">Sample 5 : Add Date and Creator's name on note title
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new trigger and set entity to account on PreCreate event Synchronous </p>
+                </p>
+
+                <h4 id="header-4">Step 2</h4>
+                <p>Create a new "attribute parameter" and choose "subject" attribute (after action) </p>
+
+                <h4 id="header-4">Step 3</h4>
+                <p>Create a new "attribute parameter" and choose "createdby" attribute (after action) </p>
+
+                <h4 id="header-4">Step 4</h4>
+                <p>Add an "override action" and set </p>
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Condition </span>Equals true</li>
+                    <li>
+                        <span style="font-weight: bold">Where ID </span>Equals #Id</li>
+                    <li>
+                        <span style="font-weight: bold">Subject Attribute </span>Equals
+                        <pre><code class="javascript">(#p1 ? #p1 : "") + " " + (new Date().toISOString()) + " Created by : " + #p2.Name</code></pre>
+
+                    </li>
+                </ul>
+
+                <h4 id="header-4">Step 5</h4>
+                <p> Save the plugin</p>
+
+                <h4 id="header-4">Import this configuration</h4>
+                <pre><code class="json">[  
+    {  
+        "ake_synchronous":true,
+        "ake_period":null,
+        "ake_order":6,
+        "ake_postcreate":false,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Override annotation (Single record)\",\"resumeDefault\":\"Override annotation (Single record)\",\"entity\":\"annotation\",\"attributes\":[{\"id\":\"06e8004c-87d8-4cdc-b306-73af76d7c6bd\",\"logicalname\":\"subject\",\"attributetype\":\"String\",\"name\":\"Title\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"(#p1 ? #p1 : \\\"\\\") + \\\" \\\" + (new Date().toISOString()) + \\\" Created by : \\\" + #p2.Name\",\"$$hashKey\":\"2E7\"}],\"relations\":[],\"type\":7,\"condition\":\"true\",\"depth\":1,\"foreachparam\":0,\"order\":1}]",
+        "ake_startdate":null,
+        "ake_precreate":true,
+        "ake_rules":"[{\"asadmin\":false,\"entity\":\"annotation\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"subject\",\"resumeDefault\":\"Attribute (subject - After)\",\"resume\":\"Attribute (subject - After)\",\"paramnumber\":1,\"code\":\"#p1\"},{\"asadmin\":false,\"entity\":\"annotation\",\"attributestate\":1,\"type\":1,\"returntype\":5,\"locked\":true,\"logicalname\":\"createdby\",\"resumeDefault\":\"Attribute (createdby - After)\",\"resume\":\"Attribute (createdby - After)\",\"paramnumber\":2,\"code\":\"#p2\"}]",
+        "ake_preupdate":false,
+        "ake_predelete":false,
+        "ake_postdelete":false,
+        "ake_isperiodic":false,
+        "ake_name":"Sample 5",
+        "ake_postupdate":false,
+        "ake_triggertype":0,
+        "ake_periodunit":null,
+        "ake_processid":null,
+        "ake_entity":"annotation"
+    }
+]</code></pre>
+                </p>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+                <script>
+                    $(document).ready(function () {
+                        $('pre code').each(function (i, block) {
+                            hljs.highlightBlock(block);
+                        });
+                    });
+                </script>
+</body>
+
+</html>
