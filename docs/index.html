@@ -247,8 +247,9 @@
 
                 <p>
                     EasyPlugins accepts expressions based on JavaScript language.
+                    Moment.js is included JavaScript engine
                     <h4>Example (from Sample 5)</h4>
-                    <pre><code class="javascript">(#p1 ? #p1 : "") + " " + (new Date().toISOString()) + " Created by : " + #p2.Name.toUpperCase()</code></pre>
+                    <pre><code class="javascript">(#p1 ? #p1 : "") + " " + moment(new Date()).format("DD/MM/YYYY HH:mm") + " Created by : " + #p2.Name.toUpperCase()</code></pre>
                 </p>
 
                 <hr>
@@ -1144,7 +1145,7 @@
                         <span style="font-weight: bold">Where ID </span>Equals #Id</li>
                     <li>
                         <span style="font-weight: bold">Subject Attribute </span>Equals
-                        <pre><code class="javascript">(#p1 ? #p1 : "") + " " + (new Date().toISOString()) + " Created by : " + #p2.Name</code></pre>
+                        <pre><code class="javascript">(#p1 ? #p1 : "") + " " + moment(new Date()).format("DD/MM/YYYY HH:mm") + " Created by : " + #p2.Name</code></pre>
 
                     </li>
                 </ul>
