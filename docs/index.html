@@ -42,6 +42,7 @@
     #content-table li {
         list-style-type: none;
     }
+
     #content-table a {
         cursor: pointer;
     }
@@ -87,15 +88,22 @@
         float: right;
         color: #3d3d3d;
     }
-    .btn:hover{
+
+    .btn:hover {
         color: #3d3d3d;
     }
 </style>
 
 <html>
-    <title>EasyPlugins</title>
-    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="images/favicon.ico">
+
 <head>
+    <title>EasyPlugins</title>
+    <meta name="description" content="Create Dynamics CRM Plugins with almost no code" />
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="images/favicon.ico">
+    <meta property="og:image" content="images/favicon.ico">
+    <meta property="og:site_name" content="EasyPlugins on GitHub">
+    <meta property="og:type" content="object">
+    <meta property="og:description" content="Create Dynamics CRM Plugins with almost no code">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="github.css">
@@ -107,7 +115,7 @@
             debugger;
             $("html, body").animate({ scrollTop: $(selector).offset().top - 10 }, 500);
         }
-        function github(){
+        function github() {
             window.location = "https://github.com/Akouddane/EasyPlugins";
         }
     </script>
@@ -120,8 +128,9 @@
 
 
     <div id="container">
-        <a style="float: right; margin: 40px;" href="https://github.com/Akouddane/EasyPlugins" class="btn btn-transparent btn-sm btn-flat" type="button">
-            <img style="height: 26px; width: 26px" src="images/github.png"> 
+        <a style="float: right; margin: 40px;" href="https://github.com/Akouddane/EasyPlugins" class="btn btn-transparent btn-sm btn-flat"
+            type="button">
+            <img style="height: 26px; width: 26px" src="images/github.png">
             <span style="font-size: 18px; line-height: 30px; display: inline-block; vertical-align: bottom;">Download on Github</span>
         </a>
 
@@ -240,8 +249,7 @@
                 </h1>
                 <p>
                     EasyPlugins allows Dynamics CRM administrators to set Plugins and Scheduled tasks in a graphical editor.
-                    <br>
-                    When a plugin trigger is set, a matching plugin step is automatically created.
+                    <br> When a plugin trigger is set, a matching plugin step is automatically created.
                 </p>
                 <p>
                     <img src="images/pluginslist.png" class="img" alt="">
@@ -251,7 +259,9 @@
                 </p>
 
                 <p>
-                    EasyPlugins accepts expressions based on <span style="font-weight: bold">JavaScript</span> language.<br>
+                    EasyPlugins accepts expressions based on
+                    <span style="font-weight: bold">JavaScript</span> language.
+                    <br>
                     <a href="https://momentjs.com/docs/#/parsing/" target="_blank">Moment.js</a> is included JavaScript engine
                     <h4>Example (from Sample 5)</h4>
                     <pre><code class="javascript">(#p1 ? #p1 : "") + " " + moment(new Date()).format("DD/MM/YYYY HH:mm") + " Created by : " + #p2.Name.toUpperCase()</code></pre>
