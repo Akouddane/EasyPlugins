@@ -132,6 +132,9 @@
             <section id="content-table">
                 <ul>
                     <li>
+                        <a onclick="scrollToElem('#how')">How EasyPlugins works</a>
+                    </li>
+                    <li>
                         <a onclick="scrollToElem('#mainInterface')">Main Interface</a>
                     </li>
                     <li>
@@ -225,6 +228,30 @@
 
 
             <section id="main_content">
+                <h1 id="how">How EasyPlugins works
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h1>
+                <p>
+                    EasyPlugins allows Dynamics CRM administrators to set Plugins and Scheduled tasks in a graphical editor.
+                    <br>
+                    When a plugin trigger is set, a matching plugin step is automatically created.
+                </p>
+                <p>
+                    <img src="images/pluginslist.png" class="img" alt="">
+                </p>
+                <p>
+                    <img src="images/pluginsteps.png" style="width: 450px;" class="img" alt="">
+                </p>
+
+                <p>
+                    EasyPlugins accepts expressions based on JavaScript language.
+                    <h4>Example (from Sample 5)</h4>
+                    <pre><code class="javascript">(#p1 ? #p1 : "") + " " + (new Date().toISOString()) + " Created by : " + #p2.Name.toUpperCase()</code></pre>
+                </p>
+
+                <hr>
                 <h1 id="mainInterface">Main Interface
                     <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
