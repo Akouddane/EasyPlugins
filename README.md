@@ -1,7 +1,12 @@
+![](https://akouddane.github.io/EasyPlugins/images/logo_md.png)
 # EasyPlugins
-Dynamics CRM EasyPlugins 365
 Create Dynamics CRM Plugins with almost no code
 
 Documentation on : https://akouddane.github.io/EasyPlugins/
 
-Dynamics CRM (9.0) Solution on dist directory
+Dynamics CRM Solutions on dist directory for : 
+* Dynamics CRM 8.0
+* Dynamics CRM 8.1
+* Dynamics CRM 8.2
+* Dynamics CRM 9.0
+
