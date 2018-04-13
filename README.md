@@ -1,6 +1,5 @@
 ![](https://akouddane.github.io/EasyPlugins/images/logo_md.png)
-# EasyPlugins
-Create Dynamics CRM Plugins with almost no code
+# Create Dynamics CRM Plugins with almost no code
 
 Documentation on : https://akouddane.github.io/EasyPlugins/
 
