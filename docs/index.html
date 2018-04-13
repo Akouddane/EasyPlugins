@@ -952,7 +952,8 @@
         "ake_triggertype":0,
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"account"
+        "ake_entity":"account",
+        "selected":true
     }
 ]</code></pre>
                 </p>
@@ -1018,7 +1019,8 @@
         "ake_triggertype":0,
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"account"
+        "ake_entity":"account",
+        "selected":true
     }
 ]</code></pre>
                 </p>
@@ -1075,7 +1077,8 @@
         "ake_triggertype":0,
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"account"
+        "ake_entity":"account",
+        "selected":true
     }
 ]</code></pre>
                 </p>
@@ -1144,7 +1147,8 @@
         "ake_triggertype":1,
         "ake_periodunit":3,
         "ake_processid":null,
-        "ake_entity":null
+        "ake_entity":null,
+        "selected":true
     }
 ]</code></pre>
                 </p>
@@ -1186,24 +1190,25 @@
                 <pre><code class="json">[  
     {  
         "ake_synchronous":true,
-        "ake_period":null,
-        "ake_order":6,
+        "ake_order":5,
+        "ake_entity":"annotation",
         "ake_postcreate":false,
         "ake_active":true,
-        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Override annotation (Single record)\",\"resumeDefault\":\"Override annotation (Single record)\",\"entity\":\"annotation\",\"attributes\":[{\"id\":\"06e8004c-87d8-4cdc-b306-73af76d7c6bd\",\"logicalname\":\"subject\",\"attributetype\":\"String\",\"name\":\"Title\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"(#p1 ? #p1 : \\\"\\\") + \\\" \\\" + (new Date().toISOString()) + \\\" Created by : \\\" + #p2.Name\",\"$$hashKey\":\"2E7\"}],\"relations\":[],\"type\":7,\"condition\":\"true\",\"depth\":1,\"foreachparam\":0,\"order\":1}]",
-        "ake_startdate":null,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Override annotation (Single record)\",\"resumeDefault\":\"Override annotation (Single record)\",\"entity\":\"annotation\",\"attributes\":[{\"id\":\"06e8004c-87d8-4cdc-b306-73af76d7c6bd\",\"logicalname\":\"subject\",\"attributetype\":\"String\",\"name\":\"Titre\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"(#p1 ? #p1 : \\\"\\\") + \\\" \\\" + moment(new Date()).format('DD/MM/YYYY HH:mm') + \\\" Created by : \\\" + #p2.Name\",\"$$hashKey\":\"2TH\"}],\"relations\":[],\"type\":7,\"condition\":\"true\",\"depth\":1,\"foreachparam\":0,\"order\":1}]",
         "ake_precreate":true,
         "ake_rules":"[{\"asadmin\":false,\"entity\":\"annotation\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"subject\",\"resumeDefault\":\"Attribute (subject - After)\",\"resume\":\"Attribute (subject - After)\",\"paramnumber\":1,\"code\":\"#p1\"},{\"asadmin\":false,\"entity\":\"annotation\",\"attributestate\":1,\"type\":1,\"returntype\":5,\"locked\":true,\"logicalname\":\"createdby\",\"resumeDefault\":\"Attribute (createdby - After)\",\"resume\":\"Attribute (createdby - After)\",\"paramnumber\":2,\"code\":\"#p2\"}]",
         "ake_preupdate":false,
         "ake_predelete":false,
         "ake_postdelete":false,
         "ake_isperiodic":false,
-        "ake_name":"Sample 5",
-        "ake_postupdate":false,
         "ake_triggertype":0,
+        "ake_name":"Sample 5 (Imported)",
+        "ake_postupdate":false,
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"annotation"
+        "ake_period":null,
+        "ake_startdate":null,
+        "selected":true
     }
 ]</code></pre>
                 </p>
