@@ -91,6 +91,8 @@
     .btn:hover {
         color: #3d3d3d;
     }
+
+    .up{ float: right; }
 </style>
 
 <html>
@@ -183,6 +185,9 @@
                             <li>
                                 <a onclick="scrollToElem('#calculated')">Calculated</a>
                             </li>
+                            <li>
+                                <a onclick="scrollToElem('#javascript')">Javascript Functions</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -257,7 +262,7 @@
 
             <section id="main_content">
                 <h1 id="how">How EasyPlugins works
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h1>
@@ -283,7 +288,7 @@
 
                 <hr>
                 <h1 id="mainInterface">Main Interface
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h1>
@@ -300,7 +305,7 @@
 
                 <hr>
                 <h1 id="triggerInterface">Trigger Interface
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h1>
@@ -342,7 +347,7 @@
                 <p>
 
                     This section defines the parameters that will be used during calculation.
-                    <br> EasyPlugins defines 3 types of parameters :
+                    <br> EasyPlugins defines 4 types of parameters :
                 </p>
                 <ul>
                     <img src="images/paramtypes.png" class="img" alt="" style="float: right; width: 120px;">
@@ -352,6 +357,8 @@
                         <span style="font-weight: bold">Request :</span> FetchXml request </li>
                     <li>
                         <span style="font-weight: bold">Calculated :</span> Parameter based on an expression (JavaScript) </li>
+                    <li>
+                        <span style="font-weight: bold">Javascript functions :</span> Parameter based on an JavaScript functions </li>
                 </ul>
 
 
@@ -386,7 +393,7 @@
 
                 <hr>
                 <h1 id="scheduledTriggerInterface">Scheduled Trigger Interface
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h1>
@@ -448,12 +455,12 @@
 
                 <hr>
                 <h1 id="parameters">Parameters
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h1>
                 This section defines the parameters that will be used during calculation.
-                <br> EasyPlugins defines 3 types of parameters :
+                <br> EasyPlugins defines 4 types of parameters :
 
                 <ul>
                     <li>
@@ -462,11 +469,13 @@
                         <span style="font-weight: bold">Request :</span> FetchXml request </li>
                     <li>
                         <span style="font-weight: bold">Calculated :</span> Parameter based on an expression (JavaScript) </li>
+                    <li>
+                        <span style="font-weight: bold">JavaScript functions :</span> Parameter based on an JavaScript functions </li>
                 </ul>
 
 
                 <h2 id="attribute">Attribute Parameter
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -496,7 +505,7 @@
 
                 <h2 id="request">
                     Request Parameter
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h2>
@@ -540,7 +549,7 @@
 
 
                 <h2 id="calculated">Calculated Parameter
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -557,6 +566,25 @@
                 </p>
 
 
+                <h2 id="javascript">JavaScript functions
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+                <p>
+                    <img src="images/javascript.png" class="img" alt="" style="width: 850px;">
+                </p>
+
+                <h4 id="header-4">
+                    JavaScript</h4>
+                <p>
+                    Create your own functions (JavaScript) using available parameters (or functions).
+                    <br> These functions can be used in other expressions (parameters or actions expressions)
+                </p>
+
+
+                
                 <p>
                     <h4 id="header-4">
                         Available parameters</h4>
@@ -565,7 +593,7 @@
 
                 <hr>
                 <h1 id="readonly">Read only parameters
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -583,7 +611,7 @@
 
                 <hr>
                 <h1 id="actions">Actions
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -612,7 +640,7 @@
                 </ul>
 
                 <h2 id="override">Override Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -634,7 +662,7 @@
 
 
                 <h2 id="create">Create Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -661,7 +689,7 @@
                 </ul>
 
                 <h2 id="update">Update Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -688,7 +716,7 @@
                 </ul>
 
                 <h2 id="delete">Delete Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -716,7 +744,7 @@
 
 
                 <h2 id="associate">Associate Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -748,7 +776,7 @@
 
 
                 <h2 id="disassociate">Disassociate Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -780,7 +808,7 @@
 
 
                 <h2 id="setstate">SetState Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -813,7 +841,7 @@
 
 
                 <h2 id="abort">Abort Message Action
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -835,7 +863,7 @@
 
                 <hr>
                 <h1 id="expressioneditor">Expression Editor
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -861,13 +889,13 @@
 
                 <hr>
                 <h1 id="tools">Main Page tools
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
                 </h1>
                 <h2 id="exportTool">Export
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -881,7 +909,7 @@
                 </p>
 
                 <h2 id="importTool">Import
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -896,13 +924,13 @@
 
                 <hr>
                 <h1 id="samples">Samples
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
                 </h1>
                 <h2 id="sample1">Sample 1 : Create an associated Contact on Account creation
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -959,7 +987,7 @@
                 </p>
 
                 <h2 id="sample2">Sample 2 : Delete all associated Contacts on Account deletion
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -1027,7 +1055,7 @@
 
 
                 <h2 id="sample3">Sample 3 : Prevent update of particular Account
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -1084,7 +1112,7 @@
                 </p>
 
                 <h2 id="sample4">Sample 4 : Periodic deletion of old lost opportunities
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
 
@@ -1154,7 +1182,7 @@
                 </p>
 
                 <h2 id="sample5">Sample 5 : Add Date and Creator's name on note title
-                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat" type="button">
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
                         <img style="height: 26px; width: 26px" src="images/top.png">
                     </button>
                 </h2>
