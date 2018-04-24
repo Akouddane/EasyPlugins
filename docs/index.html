@@ -1027,27 +1027,27 @@
                     <p> Save the plugin</p>
 
                     <h4 id="header-4">Import this configuration</h4>
-                    <pre><code class="json">[  
-    {  
+                    <pre><code class="json">[
+    {
         "ake_synchronous":true,
-        "ake_period":null,
         "ake_order":4,
-        "ake_postcreate":false,
-        "ake_active":true,
-        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Delete contact (Multiple records)\",\"resumeDefault\":\"Delete contact (Multiple records)\",\"entity\":\"contact\",\"attributes\":[],\"relations\":[],\"type\":2,\"depth\":1,\"condition\":\"true\",\"foreachparam\":1,\"idexpression\":\"#p1[0]\",\"order\":1}]",
-        "ake_startdate":null,
+        "ake_entity":"account",
         "ake_precreate":false,
-        "ake_rules":"[{\"asadmin\":false,\"type\":0,\"linefunction\":7,\"resumeDefault\":\"Request (contact)\",\"returntype\":8,\"locked\":true,\"attributereturntypes\":[4,1],\"attributereturnnames\":[\"contactid\",\"fullname\"],\"fetchxml\":\"<fetch version=\\\"1.0\\\" output-format=\\\"xml-platform\\\" mapping=\\\"logical\\\" distinct=\\\"false\\\">\\n <entity name=\\\"contact\\\">\\n <attribute name=\\\"contactid\\\" />\\n <attribute name=\\\"fullname\\\" />\\n <filter type=\\\"and\\\">\\n <condition attribute=\\\"parentcustomerid\\\" operator=\\\"eq\\\" uitype=\\\"account\\\" value=\\\"{#Id}\\\" />\\n </filter>\\n </entity>\\n</fetch>\",\"resume\":\"Request (contact)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_postcreate":false,
         "ake_preupdate":false,
+        "ake_postupdate":false,
         "ake_predelete":true,
         "ake_postdelete":false,
+        "ake_active":true,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Delete contact (Multiple records)\",\"resumeDefault\":\"Delete contact (Multiple records)\",\"entity\":\"contact\",\"attributes\":[],\"relations\":[],\"type\":2,\"depth\":1,\"condition\":\"true\",\"foreachparam\":1,\"idexpression\":\"#p1[0]\",\"order\":1}]",
+        "ake_rules":"[{\"asadmin\":false,\"type\":0,\"linefunction\":7,\"resumeDefault\":\"Request (contact)\",\"returntype\":8,\"locked\":true,\"fetchxml\":\"&lt;fetch version=\\\"1.0\\\" output-format=\\\"xml-platform\\\" mapping=\\\"logical\\\" distinct=\\\"false\\\"&gt;\\n &lt;entity name=\\\"contact\\\"&gt;\\n &lt;attribute name=\\\"contactid\\\" /&gt;\\n &lt;attribute name=\\\"fullname\\\" /&gt;\\n &lt;filter type=\\\"and\\\"&gt;\\n &lt;condition attribute=\\\"parentcustomerid\\\" operator=\\\"eq\\\" uitype=\\\"account\\\" value=\\\"{#Id}\\\" /&gt;\\n &lt;/filter&gt;\\n &lt;/entity&gt;\\n&lt;/fetch&gt;\",\"attributereturntypes\":[4,1],\"attributereturnnames\":[\"contactid\",\"fullname\"],\"resume\":\"Request (contact)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
         "ake_isperiodic":false,
-        "ake_name":"Sample 2",
-        "ake_postupdate":false,
         "ake_triggertype":0,
+        "ake_name":"Sample 2",
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"account",
+        "ake_period":null,
+        "ake_startdate":null,
         "selected":true
     }
 ]</code></pre>
