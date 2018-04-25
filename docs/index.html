@@ -254,6 +254,9 @@
                             <li>
                                 <a onclick="scrollToElem('#sample5')">Sample 5 : Add Date and Creator's name on note title </a>
                             </li>
+                            <li>
+                                <a onclick="scrollToElem('#sample6')">Sample 6 : Turn account's name into capital letters on creation </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -1239,6 +1242,68 @@
         "selected":true
     }
 ]</code></pre>
+                </p>
+
+                <h2 id="sample6">Sample 6 : Turn account's name into capital letters on creation
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+                </h2>
+                <p>
+                    <h4 id="header-4">Step 1</h4>
+                    <p>Create a new trigger and set entity to account on PreCreate event Synchronous </p>
+                </p>
+                <h4 id="header-4">Step 2</h4>
+                <p>Create a new "attribute parameter" and choose "name" attribute (after action) </p>
+
+                <h4 id="header-4">Step 3</h4>
+                <p>Create a new "Javascript parameter" and paste this code </p>
+                <pre><code class="javascript">function ToUpper(str){
+    if(str) return str.toUpperCase();
+    return "";
+}</code></pre>
+
+                <h4 id="header-4">Step 4</h4>
+                <p>Add an "override action" and set </p>
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Condition </span>Equals true</li>
+                    <li>
+                        <span style="font-weight: bold">Where ID </span>Equals #Id</li>
+                    <li>
+                        <span style="font-weight: bold">Name Attribute </span>Equals
+                        <pre><code class="javascript">ToUpper(#p1)</code></pre>
+                    </li>
+                </ul>
+
+                <h4 id="header-4">Step 5</h4>
+                <p> Save the plugin</p>
+
+                <h4 id="header-4">Import this configuration</h4>
+                <pre><code class="json">[
+    {
+        "ake_name":"Sample 6",
+        "ake_active":true,
+        "ake_synchronous":true,
+        "ake_entity":"account",
+        "ake_precreate":true,
+        "ake_postcreate":false,
+        "ake_preupdate":false,
+        "ake_postupdate":false,
+        "ake_predelete":false,
+        "ake_postdelete":false,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Override account (Single record)\",\"resumeDefault\":\"Override account (Single record)\",\"entity\":\"account\",\"attributes\":[{\"id\":\"a1965545-44bc-4b7b-b1ae-93074d0e3f2a\",\"logicalname\":\"name\",\"attributetype\":\"String\",\"name\":\"Nom du compte\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"ToUpper(#p1)\",\"$$hashKey\":\"29J\"}],\"relations\":[],\"type\":7,\"condition\":\"true\",\"depth\":1,\"foreachparam\":0,\"order\":1}]",
+        "ake_rules":"[{\"asadmin\":false,\"entity\":\"account\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"name\",\"resumeDefault\":\"Attribute (name - After)\",\"resume\":\"Attribute (name - After)\",\"paramnumber\":1,\"code\":\"#p1\"},{\"asadmin\":false,\"type\":5,\"resumeDefault\":\"Javascript function\",\"expression\":\"function ToUpper(str){\\n\\tif(str) return str.toUpperCase();\\n \\treturn \\\"\\\";\\n}\",\"returntype\":0,\"locked\":true,\"param\":{},\"resume\":\"Javascript function\",\"paramnumber\":2,\"code\":\"#p2\",\"functionslist\":[\"ToUpper\"]}]",
+        "ake_isperiodic":false,
+        "ake_triggertype":0,
+        "ake_periodunit":null,
+        "ake_processid":null,
+        "ake_period":null,
+        "ake_startdate":null,
+        "selected":true
+    }
+]
+                </code></pre>
                 </p>
 
                 <br>
