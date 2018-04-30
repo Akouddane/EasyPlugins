@@ -10,6 +10,7 @@ Dynamics CRM Solutions on **[dist](https://github.com/Akouddane/EasyPlugins/tree
 
 
 ![](https://akouddane.github.io/EasyPlugins/images/pluginslist.png)
+<img src="https://akouddane.github.io/EasyPlugins/images/pluginsteps.png" width="350">
 
 
 ![](https://akouddane.github.io/EasyPlugins/images/plugintriggerinterface.png)
