@@ -4,7 +4,7 @@
 Documentation on : https://akouddane.github.io/EasyPlugins/
 
 Dynamics CRM Solutions on **[dist](https://github.com/Akouddane/EasyPlugins/tree/master/dist)** directory : 
-* **[EasyPlugins 2.0 for Dynamics CRM 2016 & 365](https://github.com/Akouddane/EasyPlugins/blob/master/dist/EasyPlugins_2_0_0_0_managed_crm8_0.zip)**
+* **[EasyPlugins 2.0 for Dynamics CRM 2016 & 365](https://github.com/Akouddane/EasyPlugins/blob/master/dist/EasyPlugins_2_0_0_0_managed_CRM_8_0.zip)**
 
 ---
 
