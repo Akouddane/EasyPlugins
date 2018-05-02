@@ -21,4 +21,3 @@ Dynamics CRM Solutions on **[dist](https://github.com/Akouddane/EasyPlugins/tree
 
 
 ![](https://akouddane.github.io/EasyPlugins/images/scheduledtriggerinterface.png)
-c
