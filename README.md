@@ -1,3 +1,7 @@
+```diff
+- Testing in progress...
+```
+
 ![](https://akouddane.github.io/EasyPlugins/images/logo_md.png)
 # Create Dynamics CRM Plugins with almost no code
 
@@ -17,3 +21,4 @@ Dynamics CRM Solutions on **[dist](https://github.com/Akouddane/EasyPlugins/tree
 
 
 ![](https://akouddane.github.io/EasyPlugins/images/scheduledtriggerinterface.png)
+c
