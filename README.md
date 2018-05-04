@@ -1,6 +1,3 @@
-```diff
-- Testing in progress...
-```
 
 ![](https://akouddane.github.io/EasyPlugins/images/logo_md.png)
 # Create Dynamics CRM Plugins with almost no code
