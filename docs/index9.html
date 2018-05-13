@@ -105,7 +105,7 @@
     <meta property="og:url" content="https://akouddane.github.io/EasyPlugins/">
     <meta property="og:title" content="Dynamics CRM EasyPlugins on GitHub">
     <meta property="og:description" content="Create Dynamics CRM Plugins with almost no code">
-    <meta property="og:image" content="images/EPogli9.png">
+    <meta property="og:image" content="images/EPogli.png">
     <meta property="og:site_name" content="Dynamics CRM EasyPlugins on GitHub">
     <meta property="og:type" content="article">
 
@@ -217,6 +217,10 @@
                             <li>
                                 <a onclick="scrollToElem('#abort')">Abort Message</a>
                             </li>
+                            <li>
+                                <a onclick="scrollToElem('#crmaction')">CRM Action (Since version 2.0.0.2)</a>
+                            </li>
+    
                         </ul>
                     </li>
                     <li>
@@ -394,6 +398,8 @@
                         <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
                     <li>
                         <span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error </li>
+                    <li>
+                        <span style="font-weight: bold">CRM Action :</span> The Plugin will execute a CRM Action </li>
                 </ul>
 
 
@@ -458,6 +464,8 @@
                         <span style="font-weight: bold">Disassociate :</span> The Plugin will disassociate 2 records </li>
                     <li>
                         <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
+                    <li>
+                        <span style="font-weight: bold">CRM Action :</span> The Plugin will execute a CRM Action </li>
                 </ul>
 
                 <hr>
@@ -644,6 +652,8 @@
                         <span style="font-weight: bold">SetState :</span> The Plugin will change the state of a record </li>
                     <li>
                         <span style="font-weight: bold">Abort Message :</span> The Plugin will abort the current action by generating an error </li>
+                    <li>
+                        <span style="font-weight: bold">CRM Action :</span> The Plugin will execute CRM Action</li>        
                 </ul>
 
                 <h2 id="override">Override Action
@@ -694,6 +704,11 @@
                         created by the current user
                     </li>
                 </ul>
+                <p>
+                    <span style="color: #c5000c; font-weight: bold">Since version 2.0.0.2</span> <br>
+                    Create Action automatically adds a return parameter (type : Guid) <br>
+                    If the creation concerns multiple lines, the corresponding parameter will have "Foreach" as aggregation function (like a request)
+                </p>
 
                 <h2 id="update">Update Action
                     <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
@@ -868,6 +883,37 @@
 
 
 
+                <h2 id="crmaction">CRM Action
+                    <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
+                        <img style="height: 26px; width: 26px" src="images/top.png">
+                    </button>
+
+                </h2>
+
+                <p>
+                    <span style="color: #c5000c; font-weight: bold">Since version 2.0.0.2</span> <br>
+                    CRM Action executes CRM Actions and adds a return parameter (if output defined) (type : Array) depending on defined output parameters <br>
+                </p>
+    
+
+                <p></p>
+                <p>
+                    <img src="images/crmaction.png" class="img" alt="" style="width: 700px;">
+                </p>
+
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">Entity :</span> Entity associated action, "none" if global </li>
+                    <li>
+                        <span style="font-weight: bold">Action :</span> CRM Action to execute </li>
+                    <li>
+                        <span style="font-weight: bold">Attributes with Expression editor enabled:</span> Action input parameters </li>
+                    <li>
+                        <span style="font-weight: bold">Attributes without Expression editor:</span> Action output parameters </li>
+                </ul>
+    
+
+
                 <hr>
                 <h1 id="expressioneditor">Expression Editor
                     <button onclick="scrollToElem('#container')" class="btn btn-transparent btn-sm btn-flat up" type="button">
@@ -970,24 +1016,24 @@
                     <pre><code class="json">[  
     {  
         "ake_synchronous":true,
-        "ake_period":null,
-        "ake_order":3,
+        "ake_order":1,
+        "ake_entity":"account",
         "ake_postcreate":true,
         "ake_active":true,
-        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Create of contact (Single record)\",\"resumeDefault\":\"Create of contact (Single record)\",\"entity\":\"contact\",\"attributes\":[{\"id\":\"a67701f5-ebd0-4412-8b70-c61a99595647\",\"logicalname\":\"firstname\",\"attributetype\":\"String\",\"name\":\"First Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"\\\" Contact associated\\\"\",\"$$hashKey\":\"360\"},{\"id\":\"2f8fdd79-0372-490d-9053-b743becfca0d\",\"logicalname\":\"lastname\",\"attributetype\":\"String\",\"name\":\"Last Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"#p1\",\"$$hashKey\":\"36A\"},{\"id\":\"c7a58b13-df19-491c-a918-1bc26eaf6eb3\",\"logicalname\":\"parentcustomerid\",\"attributetype\":\"Customer\",\"targets\":\"account;contact\",\"name\":\"Company Name\",\"validforcreate\":true,\"validforupdate\":true,\"type\":5,\"expression\":\"#Id\",\"$$hashKey\":\"36N\"}],\"relations\":[],\"type\":0,\"depth\":1,\"condition\":\"true\",\"foreachparam\":0,\"order\":1}]",
-        "ake_startdate":null,
+        "ake_actions":"[{\"asadmin\":false,\"resume\":\"Create of contact (Single record)\",\"resumeDefault\":\"Create of contact (Single record)\",\"entity\":\"contact\",\"attributes\":[{\"id\":\"a67701f5-ebd0-4412-8b70-c61a99595647\",\"logicalname\":\"firstname\",\"attributetype\":\"String\",\"name\":\"Prénom\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"\\\"contact associated\\\"\",\"$$hashKey\":\"3QN\"},{\"id\":\"2f8fdd79-0372-490d-9053-b743becfca0d\",\"logicalname\":\"lastname\",\"attributetype\":\"String\",\"name\":\"Nom de famille\",\"validforcreate\":true,\"validforupdate\":true,\"type\":1,\"expression\":\"#p1\",\"$$hashKey\":\"3QX\"},{\"id\":\"c7a58b13-df19-491c-a918-1bc26eaf6eb3\",\"logicalname\":\"parentcustomerid\",\"attributetype\":\"Customer\",\"targets\":\"account;contact\",\"name\":\"Nom de la société\",\"validforcreate\":true,\"validforupdate\":true,\"type\":5,\"expression\":\"#Id\",\"$$hashKey\":\"3RA\"}],\"relations\":[],\"type\":0,\"depth\":1,\"condition\":\"true\",\"foreachparam\":0,\"order\":1,\"returnparam\":2}]",
         "ake_precreate":false,
-        "ake_rules":"[{\"asadmin\":false,\"entity\":\"account\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"name\",\"resumeDefault\":\"Attribute (name - After)\",\"resume\":\"Attribute (name - After)\",\"paramnumber\":1,\"code\":\"#p1\"}]",
+        "ake_rules":"[{\"asadmin\":false,\"entity\":\"account\",\"attributestate\":1,\"type\":1,\"returntype\":1,\"locked\":true,\"logicalname\":\"name\",\"resumeDefault\":\"Attribute (name - After)\",\"resume\":\"Attribute (name - After)\",\"paramnumber\":1,\"code\":\"#p1\"},{\"asadmin\":false,\"resume\":\"Id(s) of Create of contact (Single record)\",\"paramnumber\":2,\"code\":\"#p2\",\"type\":6,\"returntype\":4,\"locked\":true,\"linefunction\":0}]",
         "ake_preupdate":false,
         "ake_predelete":false,
         "ake_postdelete":false,
         "ake_isperiodic":false,
+        "ake_triggertype":0,
         "ake_name":"Sample 1",
         "ake_postupdate":false,
-        "ake_triggertype":0,
         "ake_periodunit":null,
         "ake_processid":null,
-        "ake_entity":"account",
+        "ake_period":null,
+        "ake_startdate":null,
         "selected":true
     }
 ]</code></pre>
@@ -1328,7 +1374,7 @@
                 <p>
                     <h4 id="header-4">Dynamics CRM 2016 & 365</h4>
                     <p>
-                        <a href="https://github.com/Akouddane/EasyPlugins/raw/master/dist/EasyPlugins_2_0_0_0_managed_CRM_8_0.zip">EasyPlugins Solution for Dynamics CRM versions : 8.0, 8.1, 8.2, 9.0</a>
+                        <a href="https://github.com/Akouddane/EasyPlugins/raw/master/dist/EasyPlugins_2_0_0_2_managed_CRM_8_0.zip">EasyPlugins Solution 2.0.0.2 for Dynamics CRM versions : 8.0, 8.1, 8.2, 9.0</a>
                     </p>
                 </p>
                 <br>
